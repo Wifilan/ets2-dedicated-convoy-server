@@ -143,9 +143,9 @@ def generate_config() -> str:
     """
     print("[INFO]: Writing config file...")
 
-    server_name = getenv("ETS_SERVER_NAME", "Euro Truck Simulator 2 Docker Server")
-    description = getenv("ETS_SERVER_DESCRIPTION", "")
-    welcome_message = getenv("ETS_SERVER_WELCOME_MESSAGE", "")
+    server_name = getenv("ETS_SERVER_NAME", "ECCCP128")
+    description = getenv("ETS_SERVER_DESCRIPTION", "perm-mag.ru/speed.php")
+    welcome_message = getenv("ETS_SERVER_WELCOME_MESSAGE", "perm-mag.ru/speed.php")
     password = getenv("ETS_SERVER_PASSWORD", "")
     max_players = getenv("ETS_SERVER_MAX_PLAYERS", "128")
     max_vehicles_total = getenv("ETS_SERVER_MAX_VEHICLES_TOTAL", "100")
