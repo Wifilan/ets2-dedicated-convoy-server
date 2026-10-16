@@ -147,7 +147,7 @@ def generate_config() -> str:
     description = getenv("ETS_SERVER_DESCRIPTION", "")
     welcome_message = getenv("ETS_SERVER_WELCOME_MESSAGE", "")
     password = getenv("ETS_SERVER_PASSWORD", "")
-    max_players = getenv("ETS_SERVER_MAX_PLAYERS", "8")
+    max_players = getenv("ETS_SERVER_MAX_PLAYERS", "128")
     max_vehicles_total = getenv("ETS_SERVER_MAX_VEHICLES_TOTAL", "100")
     max_ai_vehicles_player = getenv("ETS_SERVER_MAX_AI_VEHICLES_PLAYER", "50")
     max_ai_vehicles_player_spawn = getenv("ETS_SERVER_MAX_AI_VEHICLES_PLAYER_SPAWN", "50")
@@ -266,7 +266,7 @@ if __name__ == "__main__":
         logging.warning("Skipping server update. To update set 'ETS_SERVER_UPDATE_ON_START=true'.")
 
     if write_config:
-        max_players = int(getenv("ETS_SERVER_MAX_PLAYERS", 8))
-        if max_players > 8:
+        max_players = int(getenv("ETS_SERVER_MAX_PLAYERS", 128))
+        if max_players > 128:
             config_ds = server_config.replace("server_config.sii", "config_ds.cfg")
             max_player_workaround(config_ds, max_players)
